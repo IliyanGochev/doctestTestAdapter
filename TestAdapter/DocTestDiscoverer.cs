@@ -20,7 +20,7 @@ namespace TestAdapter
         public List<TestCase> GetTests(IEnumerable<string> sources)
         {
             testCases = new List<TestCase>();
-
+            log.Append(Environment.NewLine);
             foreach (var source in sources)
             {
                 log.Append($"Source: {source}{Environment.NewLine}");
