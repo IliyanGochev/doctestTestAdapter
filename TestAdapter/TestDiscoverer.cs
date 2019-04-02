@@ -10,7 +10,7 @@ namespace TestAdapter
 {
     [DefaultExecutorUri("executor://doctestTestExecutor")]
     [FileExtension(".exe")]
-    class DoctestTestDiscoverer :ITestDiscoverer
+    class TestDiscoverer :ITestDiscoverer
     {
         private IDiscoveryContext mDiscoveryContext;
         private IMessageLogger    mMessageLogger;
