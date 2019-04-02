@@ -18,17 +18,17 @@ namespace TestAdapter
         {
             mMessageLogger = logger;
         }
-        public List<TestCase> GetTests(IEnumerable<string> sources)
+        public List<TestCase> GetTests(IEnumerable<string> executables)
         {
             testCases = new List<TestCase>();
-            foreach (var source in sources)
+            foreach (var executable in executables)
             {
-                mMessageLogger.SendMessage(TestMessageLevel.Informational,$"Source: {source}{Environment.NewLine}");
-                if (!File.Exists(source))
+                mMessageLogger.SendMessage(TestMessageLevel.Informational,$"Source: {executable}{Environment.NewLine}");
+                if (!File.Exists(executable))
                 {
                     mMessageLogger.SendMessage(TestMessageLevel.Error,$" File does not exist!{Environment.NewLine}");
                 }
-                else if (CheckSource(source))
+                else if (CheckExecutableForTests(executable))
                 {
 
                 }
@@ -38,7 +38,7 @@ namespace TestAdapter
             return testCases;
         }
 
-        private bool CheckSource(string source)
+        private bool CheckExecutableForTests(string executable)
         {
             return false;
         }

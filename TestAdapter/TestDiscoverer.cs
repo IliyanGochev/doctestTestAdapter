@@ -16,7 +16,7 @@ namespace TestAdapter
         private IMessageLogger    mMessageLogger;
         private ITestCaseDiscoverySink mDiscoverySink;
 
-        public void DiscoverTests(IEnumerable<string> sources, IDiscoveryContext discoveryContext, IMessageLogger logger,
+        public void DiscoverTests(IEnumerable<string> executables, IDiscoveryContext discoveryContext, IMessageLogger logger,
             ITestCaseDiscoverySink discoverySink)
         {
             mDiscoveryContext = discoveryContext;
@@ -26,13 +26,13 @@ namespace TestAdapter
             Log(TestMessageLevel.Informational, "Starting discovery...");
             //var settingsProvider = mDiscoveryContext.RunSettings.GetSettings("s") as SettingsProvider;
 
-            DiscoverTests(sources);
+            DiscoverTests(executables);
         }
 
-        private void DiscoverTests(IEnumerable<string> sources)
+        private void DiscoverTests(IEnumerable<string> executables)
         {
             var discoverer = new DoctestDiscoverer(mMessageLogger);
-            var testCases = discoverer.GetTests(sources);
+            var testCases = discoverer.GetTests(executables);
 
             Log(TestMessageLevel.Informational, discoverer.Log);
 
