@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="DocTestTestAdapter.4688d521-cf3d-49c0-b3f5-9e5a31c5027f" Version="1.0" Language="en-US" Publisher="Iliyan Gochev" />
-        <DisplayName>DocTestTestAdapter</DisplayName>
-        <Description>Empty VSIX Project.</Description>
+        <DisplayName>doctestTestAdapter</DisplayName>
+        <Description>Test adapter for doctest testing framework</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />

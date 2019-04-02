@@ -4,7 +4,7 @@ using System.Threading;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 
-namespace DocTestTestAdapter
+namespace DoctestTestAdapter
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -24,8 +24,8 @@ namespace DocTestTestAdapter
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [Guid(DocTestTestAdapterPackage.PackageGuidString)]
-    public sealed class DocTestTestAdapterPackage : AsyncPackage
+    [Guid(DoctestTestAdapterPackage.PackageGuidString)]
+    public sealed class DoctestTestAdapterPackage : AsyncPackage
     {
         /// <summary>
         /// DocTestTestAdapterPackage GUID string.
