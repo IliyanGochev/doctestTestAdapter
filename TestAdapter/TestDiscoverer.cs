@@ -33,9 +33,6 @@ namespace TestAdapter
         {
             var discoverer = new DoctestDiscoverer(mMessageLogger);
             var testCases = discoverer.GetTests(executables);
-
-            Log(TestMessageLevel.Informational, discoverer.Log);
-
             Log(TestMessageLevel.Informational, "Start adding discovered tests");
             foreach (var testCase in testCases)
             {

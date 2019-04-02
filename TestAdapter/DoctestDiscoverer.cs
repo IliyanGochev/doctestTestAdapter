@@ -12,8 +12,6 @@ namespace TestAdapter
         private IMessageLogger mMessageLogger;
         private List<TestCase> testCases;
 
-        public string Log { get; private set; }
-
         public DoctestDiscoverer(IMessageLogger logger)
         {
             mMessageLogger = logger;
@@ -34,7 +32,6 @@ namespace TestAdapter
                 }
             }
 
-            Log = mMessageLogger.ToString();
             return testCases;
         }
 
