@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28721.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctestTestAdapter", "doctestTestAdapter.csproj", "{1F376AFC-490D-45FD-8863-3F990A3C2A9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAdapterImpl", "TestAdapter\TestAdapterImpl.csproj", "{95755AC7-FD4E-452B-8B73-5F38F3DA9C63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F376AFC-490D-45FD-8863-3F990A3C2A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F376AFC-490D-45FD-8863-3F990A3C2A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F376AFC-490D-45FD-8863-3F990A3C2A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F376AFC-490D-45FD-8863-3F990A3C2A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95755AC7-FD4E-452B-8B73-5F38F3DA9C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95755AC7-FD4E-452B-8B73-5F38F3DA9C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95755AC7-FD4E-452B-8B73-5F38F3DA9C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95755AC7-FD4E-452B-8B73-5F38F3DA9C63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A97EE197-D775-41C7-BB55-4D8B93AC6068}
+	EndGlobalSection
+EndGlobal
