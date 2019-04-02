@@ -12,26 +12,26 @@ namespace TestAdapter
     [FileExtension(".exe")]
     class DoctestTestDiscoverer :ITestDiscoverer
     {
-        private IDiscoveryContext m_discoveryContext;
-        private IMessageLogger    m_messageLogger;
-        private ITestCaseDiscoverySink m_discoverySink;
+        private IDiscoveryContext mDiscoveryContext;
+        private IMessageLogger    mMessageLogger;
+        private ITestCaseDiscoverySink mDiscoverySink;
 
         public void DiscoverTests(IEnumerable<string> sources, IDiscoveryContext discoveryContext, IMessageLogger logger,
             ITestCaseDiscoverySink discoverySink)
         {
-            m_discoveryContext = discoveryContext;
-            m_discoverySink = discoverySink;
-            m_messageLogger = logger;
+            mDiscoveryContext = discoveryContext;
+            mDiscoverySink = discoverySink;
+            mMessageLogger = logger;
 
             Log(TestMessageLevel.Informational, "Starting discovery...");
-            //var settingsProvider = m_discoveryContext.RunSettings.GetSettings("s") as SettingsProvider;
+            //var settingsProvider = mDiscoveryContext.RunSettings.GetSettings("s") as SettingsProvider;
 
             DiscoverTests(sources);
         }
 
         private void DiscoverTests(IEnumerable<string> sources)
         {
-            var discoverer = new DoctestDiscoverer(m_messageLogger);
+            var discoverer = new DoctestDiscoverer(mMessageLogger);
             var testCases = discoverer.GetTests(sources);
 
             Log(TestMessageLevel.Informational, discoverer.Log);
@@ -39,14 +39,14 @@ namespace TestAdapter
             Log(TestMessageLevel.Informational, "Start adding discovered tests");
             foreach (var testCase in testCases)
             {
-                m_discoverySink.SendTestCase(testCase);
+                mDiscoverySink.SendTestCase(testCase);
             }
             Log(TestMessageLevel.Informational, "Finished adding tests");
         }
 
         private void Log(TestMessageLevel level, string message)
         {
-            m_messageLogger.SendMessage(level, message );
+            mMessageLogger.SendMessage(level, message );
         }
     }
 }
