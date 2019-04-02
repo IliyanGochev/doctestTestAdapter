@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
 
 namespace TestAdapter
 {
     class DoctestDiscoverer
     {
-        private StringBuilder log;
+        private IMessageLogger mMessageLogger;
         private List<TestCase> testCases;
 
         public string Log { get; private set; }
 
-        public DoctestDiscoverer()
+        public DoctestDiscoverer(IMessageLogger logger)
         {
-            log = new StringBuilder();
+            mMessageLogger = logger;
         }
         public List<TestCase> GetTests(IEnumerable<string> sources)
         {
             testCases = new List<TestCase>();
-            log.Append(Environment.NewLine);
             foreach (var source in sources)
             {
-                log.Append($"Source: {source}{Environment.NewLine}");
+                mMessageLogger.SendMessage(TestMessageLevel.Informational,$"Source: {source}{Environment.NewLine}");
                 if (!File.Exists(source))
                 {
-                    log.Append($" File does not exist!{Environment.NewLine}");
+                    mMessageLogger.SendMessage(TestMessageLevel.Error,$" File does not exist!{Environment.NewLine}");
                 }
                 else if (CheckSource(source))
                 {
@@ -34,7 +34,7 @@ namespace TestAdapter
                 }
             }
 
-            Log = log.ToString();
+            Log = mMessageLogger.ToString();
             return testCases;
         }
 

@@ -31,7 +31,7 @@ namespace TestAdapter
 
         private void DiscoverTests(IEnumerable<string> sources)
         {
-            var discoverer = new DoctestDiscoverer();
+            var discoverer = new DoctestDiscoverer(m_messageLogger);
             var testCases = discoverer.GetTests(sources);
 
             Log(TestMessageLevel.Informational, discoverer.Log);
