@@ -13,8 +13,8 @@
     <ProjectGuid>{1F376AFC-490D-45FD-8863-3F990A3C2A9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DocTestTestAdapter</RootNamespace>
-    <AssemblyName>DocTestTestAdapter</AssemblyName>
+    <RootNamespace>DoctestTestAdapter</RootNamespace>
+    <AssemblyName>DoctestTestAdapter</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>
